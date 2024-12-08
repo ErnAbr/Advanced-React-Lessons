@@ -2,8 +2,6 @@ import { GreenSmallButton, RedButton } from "./components/composition";
 import { RedButtonPartial, SmallRedButtonPartial } from "./components/partial";
 import { RecursiveComponent } from "./components/recursive";
 
-RecursiveComponent;
-
 const myNestedObject = {
   key1: "value1",
   key2: {
