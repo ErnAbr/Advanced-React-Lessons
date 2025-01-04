@@ -1,14 +1,13 @@
 import { SlowComponent } from "./components/slow-component";
 import { AdditionalComplexThings, BlaBla } from "./components/dummy-components";
-import { ToggleButtonWithDialog } from "./components/toggle-button";
+import { DynamicScroll } from "./components/dynamic-scroll";
 
 export default function App() {
   return (
-    <>
-      <ToggleButtonWithDialog />
+    <DynamicScroll>
       <SlowComponent />
       <BlaBla />
       <AdditionalComplexThings />
-    </>
+    </DynamicScroll>
   );
 }
