@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useNav } from "../context/nav-controller";
+import {  useNavApi, useNavData } from "../context/nav-controller";
 
 const ToggleButton = styled.button`
   margin-bottom: 20px;
@@ -12,8 +12,21 @@ const ToggleButton = styled.button`
 `;
 
 const Button = () => {
-  const { collapsed, toggle } = useNav();
-  return <ToggleButton onClick={toggle}>{collapsed ? ">" : "⮜"}</ToggleButton>;
+  const { open, close } = useNavApi();
+  const { collapsed } = useNavData();
+
+  return (
+    <ToggleButton onClick={collapsed ? open : close}>
+      {collapsed ? ">" : "⮜"}
+    </ToggleButton>
+  );
 };
+
+export const CloseButton = () => {
+  const { close } = useNavApi();
+  console.log("close button rendered");
+  
+  return <ToggleButton onClick={close}>Close</ToggleButton>;
+}
 
 export default Button;
