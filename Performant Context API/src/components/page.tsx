@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import NavController from "../context/nav-controller";
+import NavController from "../context/nav-controller-reducer";
 
 const Container = styled.div`
   display: flex;
@@ -25,5 +25,3 @@ const Page = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default Page;
-
-

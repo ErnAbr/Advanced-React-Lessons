@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useNavData } from "../context/nav-controller";
+import { useNavData } from "../context/nav-controller-reducer";
 
 const BottomBlock = styled.div<{ collapsed?: boolean }>`
   display: grid;
