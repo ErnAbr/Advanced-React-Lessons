@@ -1,11 +1,11 @@
 import { ChangeEvent, useEffect, useRef, useState } from "react";
-import Input from "./input";
+import Input, { API } from "./input";
 
 const Form = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const ref = useRef<HTMLInputElement>(null);
+  const ref = useRef<API>(null);
 
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -20,6 +20,7 @@ const Form = () => {
     if (username.length < 1) {
       //focus on the username input
       ref.current?.focus();
+      ref.current?.shake();
     } else {
       //submit data to server
     }
